@@ -1,0 +1,65 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --vt-c-white: #ffffff;
+
+  --vt-c-indigo: #2c3e50;
+
+  --c-tt-background: rgb(17 24 39);
+
+  --vt-c-text-light-1: var(--vt-c-indigo);
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-background: var(--vt-c-white);
+  --color-text: var(--vt-c-white);
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--c-tt-background);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  line-height: 1.6;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  @apply text-4xl font-bold text-left pt-6 pb-4 z-10 !important;
+}
+
+h3 {
+  @apply text-xl font-bold text-left z-10 !important;
+}
+
+.page-layout {
+  @apply container relative mx-auto mt-auto px-4 py-12;
+}
+
+.linear-gradient {
+  &::before {
+    @apply absolute top-0 left-0 w-full h-full opacity-80 rounded;
+
+    background-image: linear-gradient(to bottom, transparent 30%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0.9) 100%);
+
+    content: "";
+  }
+}
