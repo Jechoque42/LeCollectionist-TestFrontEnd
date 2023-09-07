@@ -1,24 +1,19 @@
-/* color palette from <https://github.com/vuejs/theme> */
+/* color palette */
 :root {
-  --vt-c-white: #ffffff;
-
-  --vt-c-indigo: #2c3e50;
-
+  --c-tt-white: #ffffff;
   --c-tt-background: rgb(17 24 39);
-
-  --vt-c-text-light-1: var(--vt-c-indigo);
 }
 
 /* semantic color variables for this project */
 :root {
-  --color-background: var(--vt-c-white);
-  --color-text: var(--vt-c-white);
+  --color-background: var(--c-tt-background);
+  --color-text: var(--c-tt-white);
 }
 
 body {
   min-height: 100vh;
   color: var(--color-text);
-  background: var(--c-tt-background);
+  background: var(--color-background);
   transition:
     color 0.5s,
     background-color 0.5s;
